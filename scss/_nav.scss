@@ -1,0 +1,101 @@
+.nav {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+    &__logo {
+        font-family: $font-heading;
+        font-weight: $weight-bold;
+        font-size: 1.5rem;
+        color: $off-white;
+        z-index: 200;
+    }
+
+    &__toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    &__toggle--active {
+        .nav__toggle-bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav__toggle-bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav__toggle-bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+
+    &__toggle-bar {
+        display: block;
+        width: 28px;
+        height: 2px;
+        background-color: $off-white;
+        transition: all 0.3s ease;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(1, 22, 30, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    &__overlay--active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-md;
+    }
+
+    &__link {
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        font-weight: $weight-light;
+        letter-spacing: 0.1em;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $mid-blue;
+        }
+    }
+
+    &__card {
+        background-color: rgba(18, 69, 89, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(89, 131, 146, 0.2);
+        border-radius: 16px;
+        padding: $spacing-lg;
+        min-width: 300px;
+        text-align: center;
+    }
+}
+

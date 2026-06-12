@@ -1,0 +1,17 @@
+//Variables
+@import 'variables';
+
+//Base Styles
+@import 'base';
+@import 'typography';
+
+//Global
+@import 'nav';
+@import 'footer';
+
+//Sections
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/skills';
+@import 'sections/projects';
+@import 'sections/contact';
