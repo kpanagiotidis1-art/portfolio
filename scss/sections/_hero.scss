@@ -1,0 +1,85 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 $spacing-xl;
+    background: radial-gradient(ellipse at 0% 100%, rgba(18, 69, 89, 0.7) 0%, $ink-black 60%);
+    position: relative;
+    overflow: hidden;
+
+    &__bg-text {
+        position: absolute;
+        right: 4rem;
+        font-family: $font-heading;
+        font-size: clamp(8rem, 20vw, 16rem);
+        font-weight: $weight-bold;
+        color:  rgba(89, 131, 146, 0.07);
+        line-height: 1;
+        user-select: none;
+        z-index: 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+        position: relative;
+        z-index: 1;
+        border-left: 3px solid $mid-blue;
+        padding-left: $spacing-md;
+    }
+
+    &__greeting {
+        font-family: $font-body;
+        font-size: 1.2em;
+        font-weight: $weight-light;
+        color: $mid-blue;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+    &__name {
+        font-family: $font-heading;
+        font-size: clamp(3rem, 8vw, 7rem);
+        font-weight: $weight-bold;
+        color: $off-white;
+        line-height: 1;
+    }
+
+    &__title {
+        font-family: $font-heading;
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        font-weight: $weight-light;
+        color: $light-grey;
+        letter-spacing: 0.1em;
+    }
+
+    &__cta {
+        margin-top: $spacing-sm;
+        display: inline-block;
+        padding: 0.8rem 1.2rem;
+        border: 1px solid $mid-blue;
+        color: $mid-blue;
+        font-family: $font-body;
+        font-size: 0.9rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        align-self: flex-start;
+
+        &:hover {
+            background-color: $mid-blue;
+            color: $ink-black;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 $spacing-md;
+
+        &__bg-text {
+            display: none;
+        }
+    }
+}
