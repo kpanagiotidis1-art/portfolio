@@ -1,5 +1,5 @@
 .footer {
-    background-color: $ink-black;
+    background-color: $dark-teal;
     border-top: 1px solid $dark-teal;
     padding: $spacing-md;
     display: flex;
@@ -27,4 +27,9 @@
         color: $light-grey;
         letter-spacing: 0.05em;
     }
+
 }
+
+    .page--home .footer {
+    background-color: $ink-black;
+    }

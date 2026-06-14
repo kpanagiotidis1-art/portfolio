@@ -8,6 +8,9 @@
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: rgba(1, 22, 30, 0.85);
+    backdrop-filter: blur(8px);
+
 
     &__logo {
         font-family: $font-heading;

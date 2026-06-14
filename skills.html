@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
 </head>
-<body>
 
+<body>
     <nav class="nav">
         <div class="nav__logo">
             <a href="index.html">KP</a>
@@ -38,6 +39,63 @@
 
     <main class="main">
 
+    <section class="skills">
+        <div class="skills__sidebar">
+            <p class="skills__tag">My skills</p>
+            <div class="skills__divider"></div>
+            <h1 class="skills__heading">What I<br>work with</h1>
+            <nav class="skills__nav">
+                <button class="skills__nav-button skills__nav-button--active" data-target="frontend">Frontend</button>
+                <button class="skills__nav-button" data-target="design">Design</button>
+                <button class="skills__nav-button" data-target="tools">Tools</button>
+                <button class="skills__nav-button" data-target="learning">Learning</button>
+            </nav>
+        </div>
+
+        <div class="skills__panels">
+            <div class="skills__panel skills__panel--active" id="frontend">
+                <p class="skills__panel-title">Frontend Development</p>
+                <div class="skills__grid">
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">HTML</span><span class="skills__sub">Core</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">CSS</span><span class="skills__sub">Core</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">JavaScript</span><span class="skills__sub">Core</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">SCSS</span><span class="skills__sub">Styling</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">Responsive Design</span><span class="skills__sub">Core</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">BEM</span><span class="skills__sub">Methodology</span></div>
+                </div>
+            </div>
+
+            <div class="skills__panel" id="design">
+                <p class="skills__panel-title">Design</p>
+                <div class="skills__grid">
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">Figma</span><span class="skills__sub">Tool</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">Typography</span><span class="skills__sub">Principle</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">UI Design</span><span class="skills__sub">Core</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">Wireframing</span><span class="skills__sub">Process</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">Colour Theory</span><span class="skills__sub">Principle</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">Visual Hierarchy</span><span class="skills__sub">Principle</span></div>
+                </div>
+            </div>
+
+            <div class="skills__panel" id="tools">
+                <p class="skills__panel-title">Tools</p>
+                <div class="skills__grid">
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">VS Code</span><span class="skills__sub">Editor</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">GitHub</span><span class="skills__sub">Version Control</span></div>
+                    <div class="skills__item"><div class="skills__dot"></div><span class="skills__name">Git</span><span class="skills__sub">Version Control</span></div>
+                </div>
+            </div>
+
+            <div class="skills__panel" id="learning">
+                <p class="skills__panel-title">Currently Learning</p>
+                <div class="skills__grid">
+                    <div class="skills__item"><div class="skills__dot skills__dot--dim"></div><span class="skills__name">React</span><span class="skills__sub">In Progress</span></div>
+                    <div class="skills__item"><div class="skills__dot skills__dot--dim"></div><span class="skills__name">UX Design</span><span class="skills__sub">In Progress</span></div>
+                    <div class="skills__item"><div class="skills__dot skills__dot--dim"></div><span class="skills__name">Node.js</span><span class="skills__sub">In Progress</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
     
     <footer class="footer">
@@ -54,5 +112,7 @@
     </footer>
 
     <script src="js/nav.js"></script>
+    <script src="js/skills.js"></script>
+
 </body>
 </html>
