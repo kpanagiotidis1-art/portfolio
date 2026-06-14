@@ -1,0 +1,188 @@
+.projects {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $spacing-xl;
+    background: radial-gradient(ellipse at 0% 50%, rgba(18, 69, 89, 0.7) 0%, $ink-black 60%);
+
+    &__header {
+        margin-bottom: $spacing-lg;
+    }
+
+    &__tag {
+        font-family: $font-body;
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $mid-blue;
+        margin-bottom: $spacing-sm;
+    }
+
+    &__divider {
+        width: 40px;
+        height: 2px;
+        background-color: $mid-blue;
+        margin-bottom: $spacing-sm;
+    }
+
+    &__heading {
+        font-family: $font-heading;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: $weight-bold;
+        color: $off-white;
+    }
+
+    &__carousel {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__track {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+    }
+
+    &__card {
+        background: rgba(18, 69, 89, 0.3);
+        border: 1px solid rgba(89, 131, 146, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        flex-shrink: 0;
+        width: 380px;
+        transition: all 0.4s ease;
+        opacity: 0.4;
+        transform: scale(0.92);
+
+        &--active {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &__card-img {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(1, 22, 30, 0.2), rgba(1, 22, 30, 0.7));
+        }
+    }
+
+    &__card-body {
+        padding: $spacing-sm $spacing-md;
+    }
+
+    &__card-title {
+        font-family: $font-heading;
+        font-size: 1.3rem;
+        font-weight: $weight-bold;
+        color: $off-white;
+        margin-bottom: 0.3rem;
+    }
+
+    &__card-tech {
+        font-family: $font-body;
+        font-size: 0.75rem;
+        color: $mid-blue;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+    }
+
+    &__card-desc {
+        font-family: $font-body;
+        font-size: 0.85rem;
+        color: $light-grey;
+        line-height: 1.7;
+        margin-bottom: $spacing-sm;
+    }
+
+    &__card-links {
+        display: flex;
+        gap: $spacing-sm;
+    }
+
+    &__card-link {
+        font-family: $font-body;
+        font-size: 0.8rem;
+        color: $mid-blue;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid rgba(89, 131, 146, 0.3);
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $mid-blue;
+            color: $ink-black;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-md;
+        margin-top: $spacing-md;
+    }
+
+    &__arrow {
+        background: rgba(89, 131, 146, 0.15);
+        border: 1px solid rgba(89, 131, 146, 0.3);
+        color: $mid-blue;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(89, 131, 146, 0.3);
+        }
+    }
+
+    &__dots {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(89, 131, 146, 0.3);
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &--active {
+            background: $mid-blue;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: $spacing-lg $spacing-md;
+
+        &__card {
+            width: 280px;
+        }
+    }
+}

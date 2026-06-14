@@ -37,7 +37,70 @@
     </nav>
 
     <main class="main">
+        <section class="projects">
+            <div class="projects__header">
+                <p class="projects__tag">My work</p>
+                <div class="projects__divider"></div>
+                <h1 class="projects__heading">Projects</h1>
+            </div>
 
+            <div class="projects__carousel">
+                <div class="projects__track" id="projectsTrack">
+
+                    <div class="projects__card" id="card-0">
+                        <div class="projects__card-img">
+                            <img src="assets/images/anchor.png" alt="Anchor App">
+                        </div>
+                        <div class="projects__card-body">
+                            <h2 class="projects__card-title">Anchor</h2>
+                            <p class="projects__card-tech">React · JavaScript · Supabase</p>
+                            <p class="projects__card-desc">A personal discipline and productivity platform designed to help users build consistency, track progress, and stay focused on long-term growth.</p>
+                            <div class="projects__card-links">
+                                <a href="https://github.com/kpanagiotidis1-art/Anchor" class="projects__card-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="https://anchor-six-beta.vercel.app/" class="projects__card-link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__card" id="card-1">
+                        <div class="projects__card-img">
+                            <img src="assets/images/moneyflow.png" alt="Money Flow App">
+                        </div>
+                        <div class="projects__card-body">
+                            <h2 class="projects__card-title">Money Flow</h2>
+                            <p class="projects__card-tech">React · JavaScript · Supabase</p>
+                            <p class="projects__card-desc">A finance tracking application that helps users understand where their money is going through simple expense logging and visual spending insights.</p>
+                            <div class="projects__card-links">
+                                <a href="https://github.com/kpanagiotidis1-art/money-flow" class="projects__card-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="https://money-flow-chi-lilac.vercel.app/" class="projects__card-link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__card" id="card-2">
+                        <div class="projects__card-img">
+                            <img src="assets/images/builtbykosta.png" alt="BuiltByKosta">
+                        </div>
+                        <div class="projects__card-body">
+                            <h2 class="projects__card-title">BuiltByKosta</h2>
+                            <p class="projects__card-tech">HTML · CSS · JavaScript</p>
+                            <p class="projects__card-desc">A personal portfolio website created to showcase my projects, technical skills, and development journey as a frontend developer.</p>
+                            <div class="projects__card-links">
+                                <a href="https://github.com/kpanagiotidis1-art/builtbykosta-site" class="projects__card-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="https://builtbykosta-site.vercel.app/" class="projects__card-link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="projects__controls">
+                    <button class="projects__arrow" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="projects__dots" id="projectsDots"></div>
+                    <button class="projects__arrow" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section
     </main>
     
     <footer class="footer">
@@ -54,5 +117,6 @@
     </footer>
 
     <script src="js/nav.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 </html>
