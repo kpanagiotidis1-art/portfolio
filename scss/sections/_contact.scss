@@ -1,0 +1,160 @@
+.contact {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background-color: $ink-black;
+    padding: $spacing-xl;
+    gap: $spacing-xl;
+    align-items: center;
+    background: radial-gradient(ellipse at 100% 90%, rgba(18, 69, 89, 0.7) 0%, $ink-black 60%);
+
+
+    &__left {
+        background-color: $dark-teal;
+        padding: $spacing-lg;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+        min-height: 400px;
+        border: 1px solid rgba(89, 131, 146, 0.2);
+    }
+
+    &__tag {
+        font-family: $font-body;
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(240, 244, 248, 0.6);
+        margin-bottom: $spacing-sm;
+    }
+
+    &__divider {
+        width: 40px;
+        height: 2px;
+        background-color: $mid-blue;
+        margin-bottom: $spacing-md;
+    }
+
+    &__name {
+        font-family: $font-heading;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: $weight-bold;
+        color: $off-white;
+        line-height: 1.1;
+    }
+
+    &__tagline {
+        font-family: $font-body;
+        font-size: 0.95rem;
+        color: rgba(240, 244, 248, 0.7);
+        line-height: 1.7;
+    }
+
+    &__right {
+        background-color: transparent;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: $spacing-lg;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+    }
+
+    &__input {
+        background: rgba(18, 69, 89, 0.2);
+        border: 1px solid rgba(89, 131, 146, 0.2);
+        border-radius: 4px;
+        padding: 0.9rem 1.2rem;
+        color: $off-white;
+        font-family: $font-body;
+        font-size: 0.9rem;
+        transition: border-color 0.3s ease;
+
+        &::placeholder {
+            color: $light-grey;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $mid-blue;
+        }
+    }
+
+    &__textarea {
+        background: rgba(18, 69, 89, 0.2);
+        border: 1px solid rgba(89, 131, 146, 0.2);
+        border-radius: 4px;
+        padding: 0.9rem 1.2rem;
+        color: $off-white;
+        font-family: $font-body;
+        font-size: 0.9rem;
+        height: 140px;
+        resize: none;
+        transition: border-color 0.3s ease;
+
+        &::placeholder {
+            color: $light-grey;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $mid-blue;
+        }
+    }
+
+    &__btn {
+        align-self: flex-start;
+        padding: 0.9rem 2rem;
+        border: 1px solid $mid-blue;
+        color: $mid-blue;
+        font-family: $font-body;
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: $mid-blue;
+            color: $ink-black;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: $spacing-md;
+    }
+
+    &__social-link {
+        font-family: $font-body;
+        font-size: 0.9rem;
+        color: $light-grey;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $mid-blue;
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+
+        &__left {
+            padding: $spacing-lg $spacing-md;
+            min-height: 250px;
+        }
+
+        &__right {
+            padding: $spacing-lg $spacing-md;
+        }
+    }
+}
