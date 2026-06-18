@@ -147,14 +147,21 @@
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
+        min-height: unset;
+        padding: 0;
+        padding-top: 80px;
+        gap: 0;
 
         &__left {
-            padding: $spacing-lg $spacing-md;
-            min-height: 250px;
+            min-height: unset;
+            padding: $spacing-md;
+            border-radius: 12px;
+            margin: 0 $spacing-md $spacing-md;
         }
 
         &__right {
-            padding: $spacing-lg $spacing-md;
+            padding: 0 $spacing-md $spacing-md;
+            gap: $spacing-sm;
         }
     }
 }

@@ -14,6 +14,16 @@ body {
     color: $off-white;
     font-family: $font-body;
     line-height: 1.6;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+
+    &.fade-in {
+        opacity: 1;
+    }
+
+    &.fade-out {
+        opacity: 0;
+    }
 }
 
 a {
@@ -28,4 +38,8 @@ ul {
 img {
     max-width: 100%;
     display: block;
+}
+
+.main {
+    padding-top: 30px;
 }

@@ -123,8 +123,23 @@
     }
 
     @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        padding: $spacing-lg $spacing-md;
+        min-height: unset;
+        height: auto;
+        padding: $spacing-md;
+        gap: $spacing-sm;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        &__sidebar {
+            margin-bottom: $spacing-sm;
+            padding-bottom: 0;
+        }
+
+        &__heading {
+            font-size: 2rem;
+            margin-bottom: $spacing-sm;
+        }
 
         &__nav {
             flex-direction: row;
@@ -132,19 +147,26 @@
             border-bottom: 1px solid rgba(89, 131, 146, 0.2);
             padding-right: 0;
             padding-bottom: $spacing-sm;
+            padding-left: 0;
             flex-wrap: wrap;
             gap: 0.5rem;
+            margin-bottom: 0;
         }
 
         &__nav-button {
             border-left: none;
             border-bottom: 2px solid transparent;
-            padding: 0.5rem;
+            padding: 0.4rem 0.5rem;
 
             &--active {
                 border-left-color: transparent;
                 border-bottom-color: $mid-blue;
             }
+        }
+
+        &__panels {
+            margin-top: $spacing-sm;
+            padding: 0;
         }
 
         &__grid {

@@ -14,6 +14,14 @@ body {
   color: #f0f4f8;
   font-family: "Work Sans", sans-serif;
   line-height: 1.6;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+body.fade-in {
+  opacity: 1;
+}
+body.fade-out {
+  opacity: 0;
 }
 
 a {
@@ -28,6 +36,10 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+
+.main {
+  padding-top: 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -274,7 +286,7 @@ a {
   height: 600px;
   object-fit: cover;
   object-position: center;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .about__tag {
   font-family: "Work Sans", sans-serif;
@@ -322,11 +334,19 @@ a {
 @media (max-width: 768px) {
   .about {
     grid-template-columns: 1fr;
-    padding: 4rem 2rem;
+    padding: 2rem;
     gap: 2rem;
+    min-height: unset;
+    padding-top: 80px;
   }
   .about__image-wrapper {
-    height: 350px;
+    height: 280px;
+  }
+  .about__image img {
+    height: 280px;
+  }
+  .about__text {
+    max-width: 100%;
   }
 }
 
@@ -440,8 +460,21 @@ a {
 }
 @media (max-width: 768px) {
   .skills {
-    grid-template-columns: 1fr;
-    padding: 4rem 2rem;
+    min-height: unset;
+    height: auto;
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .skills__sidebar {
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+  }
+  .skills__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
   .skills__nav {
     flex-direction: row;
@@ -449,17 +482,23 @@ a {
     border-bottom: 1px solid rgba(89, 131, 146, 0.2);
     padding-right: 0;
     padding-bottom: 1rem;
+    padding-left: 0;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 0;
   }
   .skills__nav-button {
     border-left: none;
     border-bottom: 2px solid transparent;
-    padding: 0.5rem;
+    padding: 0.4rem 0.5rem;
   }
   .skills__nav-button--active {
     border-left-color: transparent;
     border-bottom-color: #598392;
+  }
+  .skills__panels {
+    margin-top: 1rem;
+    padding: 0;
   }
   .skills__grid {
     grid-template-columns: 1fr;
@@ -762,13 +801,20 @@ a {
 @media (max-width: 768px) {
   .contact {
     grid-template-columns: 1fr;
+    min-height: unset;
+    padding: 0;
+    padding-top: 80px;
+    gap: 0;
   }
   .contact__left {
-    padding: 4rem 2rem;
-    min-height: 250px;
+    min-height: unset;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 0 2rem 2rem;
   }
   .contact__right {
-    padding: 4rem 2rem;
+    padding: 0 2rem 2rem;
+    gap: 1rem;
   }
 }
 
